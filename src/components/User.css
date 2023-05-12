@@ -1,10 +1,10 @@
 div.user-container{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    width: 1250px;
+    height: 72px;
 }
-
-    
 
 img.user-img{
     width: 50px;

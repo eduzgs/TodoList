@@ -1,0 +1,52 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    right: 0%;
+    top: 0%;
+    width: 600px;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+}
+aside h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+aside input,label{
+    width: 100%;
+    margin: 4px 20px;
+}
+
+
+.butons{
+    display: flex;
+    flex-direction: column;
+}
+button.add{
+    height:60px;
+    background-color: #5d0ca3;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin: 0px 20px;
+}
+
+button.cancel{
+    height:60px;
+    color: #5d0ca3;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin: 0px 20px;
+}
