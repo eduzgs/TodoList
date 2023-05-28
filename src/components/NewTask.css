@@ -8,7 +8,6 @@ aside {
     width: 600px;
     height: 100%;
     background-color: white;
-    border: 1px solid black;
 }
 
 .task{
@@ -23,6 +22,9 @@ aside h2{
 aside input,label{
     width: 100%;
     margin: 4px 20px;
+}
+input{
+    align-items: center;
 }
 
 
