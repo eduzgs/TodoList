@@ -16,7 +16,11 @@ function App() {
       <TodoSearcher />
       <CreateItemButton />
       <TodoList />
-        {list.map(todo => <TodoItem key = {todo.text} text = {todo.text}/>)}
+        {list.map(todo =>
+        <TodoItem key = {todo.text} 
+        text = {todo.text}
+        completed={todo.completed}
+        />)}
     </>
     )
 }
