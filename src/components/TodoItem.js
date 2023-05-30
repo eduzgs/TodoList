@@ -8,7 +8,9 @@ export function TodoItem({text, completed}){
             <p className= {`TodoItem-p ${completed && "TodoItem-p--complete"}`}>
                 {text}
             </p>
-            <span className='Icon Icon-delete'>X</span>
+            <span 
+            className='Icon Icon-delete'
+            onClick={(event) => alert('me cierro')}>X</span>
         </li>
     )
 }

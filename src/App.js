@@ -9,18 +9,31 @@ import { TodoItem } from "./components/TodoItem";
 import {list} from './components/arr.js';
 
 function App() {
+  const [searchValue, setSearchValue] = React.useState('')
+  const [todos, setTodos] = React.useState(list)
+  const completedTodos = todos.filter(todo => !!todo.completed).length
+  const totalTodos = todos.length
+  const searchTodo = todos.filter(todo => {
+    const todoSearchText = todo.text.toLocaleLowerCase()
+    const todoSearchValue = searchValue.toLocaleLowerCase()
+    return todoSearchText.includes(todoSearchValue)
+  })
+  console.log(`Los usuarios buscan: ${searchValue}`)
   return (
     <>
       <User />
-      <TodoCounter completed={0} total={list.length}/>
-      <TodoSearcher />
-      <CreateItemButton />
+      <TodoCounter completed={completedTodos} total={totalTodos}/>
+      <TodoSearcher 
+      searchValue = {searchValue}
+      setSearchValue = {setSearchValue}/>
       <TodoList />
-        {list.map(todo =>
+        {searchTodo.map(todo =>
         <TodoItem key = {todo.text} 
         text = {todo.text}
         completed={todo.completed}
         />)}
+      <CreateItemButton />
+
     </>
     )
 }
