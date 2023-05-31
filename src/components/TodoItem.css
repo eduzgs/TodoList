@@ -26,9 +26,7 @@ svg.Icon-check {
     margin: 20px;
     cursor: pointer;
 }
-svg.Icon-check:hover{
-    opacity: 1;
-}
+
 svg.Icon-check--active {
     opacity: 1;
 }
