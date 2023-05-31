@@ -8,6 +8,7 @@ const list = [{text: 'Estudiar para examen de conduccion', completed: false},
 {text: 'Despertarse temprano', completed: true},
 {text: 'Cita', completed: false},
 {text: 'Regalo para la auro', completed: false},
+{text: 'Eliminar todos o cambiar su estado', completed: false}
 ]
 
 export {list}

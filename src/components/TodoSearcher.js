@@ -4,7 +4,7 @@ export function TodoSearcher ({searchValue, setSearchValue}){
     return (
         <div className="TodoSearch">
             <p>Search task</p>
-            <input placeholder="Cortar cebolla"
+            <input placeholder="Terminar el curso de react"
             value={searchValue}
             onChange={(event)=> {
                 setSearchValue(event.target.value);
