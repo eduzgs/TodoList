@@ -8,6 +8,8 @@ import { TodoList } from "./components/TodoList";
 import { TodoItem } from "./components/TodoItem";
 import {list} from './components/arr.js';
 
+
+
 function App() {
   const [searchValue, setSearchValue] = React.useState('')
   const [todos, setTodos] = React.useState(list)

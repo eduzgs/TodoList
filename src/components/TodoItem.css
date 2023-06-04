@@ -1,45 +1,20 @@
-.TodoItem{
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: large;
+.TodoItem {
     background-color: #FAFAFA;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-.TodoItem-p{
+  }
+  
+  .TodoItem-p {
     margin: 24px 0 24px 24px;
     width: calc(100% - 120px);
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-}
-
-.TodoItem-p--complete {
+  }
+  .TodoItem-p--complete {
     text-decoration: line-through;
-}
-svg.Icon-check {
-    width: 40px;
-    opacity: 0.1;
-    margin: 20px;
-    cursor: pointer;
-}
-
-svg.Icon-check--active {
-    opacity: 1;
-}
-
-span.Icon-delete {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0px 20px 68px 0px;
-    opacity: 0.3;
-    cursor: pointer;
-}
-
-span.Icon-delete:hover{
-    color: red;
-    opacity: 1;
-}
+  }
