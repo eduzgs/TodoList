@@ -23,7 +23,7 @@ export function useLocalStorage(itemName, initialValue) {
                     setLoading(false)
                     setError(true)
                 }
-        }, 50000)
+        }, 2500)
     }, [])
     
   
