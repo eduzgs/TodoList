@@ -5,13 +5,16 @@ import {CreateItemButton} from '../CreateItemButton'
 import {NewTask} from '../NewTask'
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
+import { Loading } from '../Loading'
 export function AppUI({completedTodos,
 totalTodos,
 searchValue,
 setSearchValue,
 searchedTodos,
 completeTodo,
-deleteTodo
+deleteTodo,
+loading,
+error
 }){
     return (
         <>
@@ -20,7 +23,11 @@ deleteTodo
           <TodoSearcher 
           searchValue = {searchValue}
           setSearchValue = {setSearchValue}/>
-          <TodoList />
+          <TodoList>
+            {loading && (<Loading />)}
+            {error && (<p>Ups!, something went wrong ...</p>)}
+            {(!loading && searchedTodos.lenght === 0) && <p>Create new todos to begin!</p>}
+            
             {searchedTodos.map(todo =>
             <TodoItem key = {todo.text} 
             text = {todo.text}
@@ -28,6 +35,7 @@ deleteTodo
             onComplete = { () => completeTodo(todo.text)}
             onDelete ={() => deleteTodo(todo.text)}
             />)}
+        </TodoList>
           <CreateItemButton />
         </>
     )
