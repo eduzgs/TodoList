@@ -1,6 +1,7 @@
-aside {
+ .modal aside{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     position: fixed;
     right: 0%;
@@ -10,45 +11,69 @@ aside {
     background-color: white;
 }
 
-.task{
+.modal.task{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 }
-aside h2{
+.modal .butons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal h2{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 32px;
 }
-aside input,label{
+.modal input,label{
     width: 100%;
     margin: 4px 20px;
 }
-input{
+.modal input{
     align-items: center;
+    height: 60px;
 }
 
 
-.butons{
-    display: flex;
-    flex-direction: column;
-}
-button.add{
-    height:60px;
-    background-color: #5d0ca3;
+.modal button.add{
     color: white;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     border: none;
     border-radius: 8px;
-    margin: 0px 20px;
-}
+    margin: 20px 20px;
+    --text-color: #fff;
+    position: relative;
+    border: none;
+    background: #5d0ca3;
+    color: var(--text-color);
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: #34055d 0px 7px 2px, #000 0px 8px 5px;
+  }
 
-button.cancel{
-    height:60px;
+
+.modal button.cancel{
+    background-color: white;
     color: #5d0ca3;
     font-size: 24px;
     font-weight: bold;
     border: none;
     border-radius: 8px;
     margin: 0px 20px;
-}
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: #a8a1a1 0px 7px 2px, #000 0px 8px 5px;
+} 

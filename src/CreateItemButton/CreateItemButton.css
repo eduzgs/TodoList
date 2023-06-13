@@ -3,7 +3,7 @@
     width: 100%;
     justify-content: center;
 }
-button {
+.create-new-task button {
     --bg: #e66100;
     --text-color: #fff;
     position: relative;
