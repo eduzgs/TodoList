@@ -34,6 +34,7 @@
 }
 
 .modal button.add{
+    position: relative;
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -56,6 +57,7 @@
 
 
 .modal button.cancel{
+    position: relative;
     background-color: white;
     color: #5d0ca3;
     font-size: 24px;
@@ -72,3 +74,18 @@
     letter-spacing: 1px;
     box-shadow: #a8a1a1 0px 7px 2px, #000 0px 8px 5px;
 }
+
+.modal  button.add:active {
+    top: 4px;
+    box-shadow: #34055d 0px 3px 2px,#000 0px 3px 5px;
+  }
+
+  .modal  button.cancel:active {
+    top: 4px;
+    box-shadow: white 0px 3px 2px,#000 0px 3px 5px;
+  }
+
+.modal button:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
