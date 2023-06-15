@@ -1,14 +1,19 @@
 import React from 'react'
 import { TodoContext } from '../TodoContext'
-import './NewTask.css'
+import './TodoForm.css'
 
-function NewTask(){
+function TodoForm(){
     const {addTodo, setOpenModal} = React.useContext(TodoContext)
     const [newTodoValue, setNewTodoValue] = React.useState('')
     const onSubmit = (event) => {
         event.preventDefault()
         addTodo(newTodoValue)
         setOpenModal(false)
+    }
+    const onKeyPress = (event) => {
+        if(event.keyCode === 13){
+            onSubmit()
+        }
     }
     const onCancel = () => {
         setOpenModal(false)
@@ -17,13 +22,12 @@ function NewTask(){
         setNewTodoValue(event.target.value)
     }
     return(
-        <aside >
+        <aside  transition-style="in:wipe:left">
             <form onSubmit={onSubmit} className='task'>
                 <h2>Add your New Task</h2>
-                <label htmlFor="your-task">Your task</label>
-                <input id="your-task" type="text" value={newTodoValue} onChange={onChange}/>
+                <input id="your-task" type="text" value={newTodoValue} onChange={onChange} />
             <div className='butons'>
-                <button type = "submit" className='add'>Add Task</button>
+                <button onKeyDown = {onKeyPress} type = "submit" className='add'>Add Task</button>
                 <button type = "button" onClick = {onCancel}  className='cancel'>Cancel</button>
             </div>
             </form>
@@ -31,4 +35,4 @@ function NewTask(){
     )
 }
 
-export { NewTask }
+export { TodoForm }

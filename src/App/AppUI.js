@@ -8,7 +8,7 @@ import { TodoLoading } from '../TodoLoading'
 import { TodoError } from '../TodoError'
 import { EmptyTodos } from '../EmptyTodos'
 import { CreateTodoButton } from '../CreateTodoButton'
-import { NewTask } from '../NewTask'
+import { TodoForm } from '../TodoForm'
 import { Modal } from '../Modal'
 import { TodoContext } from '../TodoContext'
 function AppUI(){
@@ -25,7 +25,7 @@ function AppUI(){
           <User setOpenModal={setOpenModal} />
           {openModal &&
             (<Modal>
-              <NewTask />
+              <TodoForm />
             </Modal>)}
           <TodoCounter />
           <TodoSearcher />
@@ -47,7 +47,7 @@ function AppUI(){
           <CreateTodoButton setOpenModal={setOpenModal} />
           {openModal && (
             <Modal>
-              <NewTask />
+              <TodoForm />
             </Modal>)}
         </>
     )
