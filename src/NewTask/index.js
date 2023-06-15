@@ -1,16 +1,16 @@
 import React from 'react'
-import './NewTask.css'
 import { TodoContext } from '../TodoContext'
-export function NewTask(){
+import './NewTask.css'
+
+function NewTask(){
     const {addTodo, setOpenModal} = React.useContext(TodoContext)
     const [newTodoValue, setNewTodoValue] = React.useState('')
     const onSubmit = (event) => {
         event.preventDefault()
+        addTodo(newTodoValue)
         setOpenModal(false)
     }
-    const onCancel = (event) => {
-        event.preventDefault()
-        addTodo(newTodoValue)
+    const onCancel = () => {
         setOpenModal(false)
     }
     const onChange = (event) => {
@@ -30,3 +30,5 @@ export function NewTask(){
         </aside>
     )
 }
+
+export { NewTask }

@@ -1,8 +1,6 @@
 import React from "react";
 import "./Loading.css"
-    function Loading(){
-        
-    
+    function TodoLoading(){
       return (
         <div className="loading">
             <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" className="pencil">
@@ -41,4 +39,4 @@ import "./Loading.css"
     }
 
 
-  export { Loading}
+  export { TodoLoading }

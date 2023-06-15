@@ -8,10 +8,11 @@ function TodoProvider({ children }){
         loading,
         error} = useLocalStorage('TODOS_V2', []);
     const [searchValue, setSearchValue] = React.useState('');
-    const [openModal, setOpenModal] = React.useState(true)
+    const [openModal, setOpenModal] = React.useState(false)
+    
     const completedTodos = todos.filter(
       todo => !!todo.completed
-    ).length;
+    ).length; //metodo filter me creará un nuevo array que cumplan la condición implementada
     const totalTodos = todos.length;
   
     const searchedTodos = todos.filter(
@@ -43,7 +44,7 @@ function TodoProvider({ children }){
       const todoIndex = newTodos.findIndex(
         (todo) => todo.text === text
       );
-      newTodos.splice(todoIndex, 1);
+      newTodos.splice(todoIndex, 1); //metodo splice elimina(el indice colocado, elimina la cantidad hacia la derecha)
       saveTodos(newTodos);
     };
     

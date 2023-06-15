@@ -13,7 +13,7 @@ img.user-img{
 div.user-info{
     position: relative;
 }
-div.state{
+div.circle{
     position: absolute;
     right: 5%;
     bottom: 5%;

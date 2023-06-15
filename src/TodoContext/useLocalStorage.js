@@ -1,7 +1,7 @@
 import React from "react";
 // localStorage.setItem('TODOS_V1', JSON.stringify(list))
 // localStorage.removeItem('TODOS_V1', list)
-export function useLocalStorage(itemName, initialValue) {
+function useLocalStorage(itemName, initialValue) {
     const [item, setItem] = React.useState(initialValue);
     const [loading, setLoading] = React.useState(true)
     const [error, setError] = React.useState(false)
@@ -23,7 +23,7 @@ export function useLocalStorage(itemName, initialValue) {
                     setLoading(false)
                     setError(true)
                 }
-        }, 2500)
+        }, 2000)
     }, [])
     
   
@@ -39,3 +39,5 @@ export function useLocalStorage(itemName, initialValue) {
         error
     };
   }
+
+  export { useLocalStorage }

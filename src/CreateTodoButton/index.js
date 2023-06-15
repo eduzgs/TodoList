@@ -1,9 +1,9 @@
 import './CreateItemButton.css'
-export function CreateItemButton({setOpenModal}){
+export function CreateTodoButton({setOpenModal}){
         return(
             <div className="create-new-task">
                 <button
-                onclick = {() => {setOpenModal(state => !state)}}>Create new task</button>
+                onClick = {() =>{setOpenModal(state => !state)}}>Create new task</button>
             </div>
         )
 }

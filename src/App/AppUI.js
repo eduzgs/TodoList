@@ -4,12 +4,14 @@ import { TodoCounter } from '../TodoCounter'
 import { TodoSearcher } from '../TodoSearcher'
 import { TodoItem } from "../TodoItem"
 import { TodoList } from "../TodoList"
-import { Loading } from '../Loading'
-import { CreateItemButton } from '../CreateItemButton'
+import { TodoLoading } from '../TodoLoading'
+import { TodoError } from '../TodoError'
+import { EmptyTodos } from '../EmptyTodos'
+import { CreateTodoButton } from '../CreateTodoButton'
 import { NewTask } from '../NewTask'
 import { Modal } from '../Modal'
 import { TodoContext } from '../TodoContext'
-export function AppUI(){
+function AppUI(){
   const {
     loading,
     error,
@@ -20,13 +22,17 @@ export function AppUI(){
     setOpenModal} = React.useContext(TodoContext)
     return (
         <>
-          <User />
+          <User setOpenModal={setOpenModal} />
+          {openModal &&
+            (<Modal>
+              <NewTask />
+            </Modal>)}
           <TodoCounter />
           <TodoSearcher />
               <TodoList>
-                {loading && (<Loading />)}
-                {error && (<p>Ups!, something went wrong ...</p>)}
-                {(!loading && searchedTodos.lenght === 0) && <p>Create new todos to begin!</p>}
+                {loading && (<TodoLoading />)}
+                {error && (<TodoError />)}
+                {(!loading && searchedTodos.lenght === 0) && <EmptyTodos />}
 
                 {searchedTodos.map(todo =>
                   <TodoItem
@@ -38,12 +44,13 @@ export function AppUI(){
                   />
                 )}
             </TodoList>
-          <CreateItemButton setOpenModal={setOpenModal} />
-          {openModal &&
-            (<Modal>
+          <CreateTodoButton setOpenModal={setOpenModal} />
+          {openModal && (
+            <Modal>
               <NewTask />
             </Modal>)}
         </>
     )
 }
 
+export { AppUI }
