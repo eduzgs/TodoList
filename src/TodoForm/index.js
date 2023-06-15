@@ -25,7 +25,7 @@ function TodoForm(){
         <aside  transition-style="in:wipe:left">
             <form onSubmit={onSubmit} className='task'>
                 <h2>Add your New Task</h2>
-                <input id="your-task" type="text" value={newTodoValue} onChange={onChange} />
+                <input id="your-task" type="text" value={newTodoValue} onChange={onChange} required />
             <div className='butons'>
                 <button onKeyDown = {onKeyPress} type = "submit" className='add'>Add Task</button>
                 <button type = "button" onClick = {onCancel}  className='cancel'>Cancel</button>
