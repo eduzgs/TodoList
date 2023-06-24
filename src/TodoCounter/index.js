@@ -8,7 +8,7 @@ export function TodoCounter({completed, total}){
     } = React.useContext(TodoContext)
     return (
         <>
-                <h4> Hi, <span>Eduardo!</span></h4>
+                <h4> Hi, <span>User123!</span></h4>
                 <h2> Your <span>tasks</span> <br/>completed {completedTodos} of {totalTodos}</h2>
         </>
     )
