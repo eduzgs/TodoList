@@ -1,6 +1,7 @@
 import React from 'react'
 import { TodoContext } from '../TodoContext'
 import  './TodoCounter.css'
+
 export function TodoCounter({completed, total}){
     const { 
         completedTodos,
@@ -8,7 +9,7 @@ export function TodoCounter({completed, total}){
     } = React.useContext(TodoContext)
     return (
         <>
-                <h4> Hi, <span>User123!</span></h4>
+                <h4> Hi, <span>Productive User!</span></h4>
                 <h2> Your <span>tasks</span> <br/>completed {completedTodos} of {totalTodos}</h2>
         </>
     )
