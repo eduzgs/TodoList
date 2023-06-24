@@ -1,0 +1,29 @@
+div.user-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1250px;
+    height: 72px;
+}
+
+img.user-img{
+    width: 50px;
+    height: 50px;
+}
+div.user-info{
+    position: relative;
+}
+div.circle{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #e66100;
+}
+
+img.plus{
+    width: 35px;
+    height: 35px;
+}

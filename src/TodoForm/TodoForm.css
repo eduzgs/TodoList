@@ -1,0 +1,91 @@
+ .modal aside{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 0%;
+    top: 0%;
+    width: 350px;
+    height: 100vh;
+    background-color: white;
+    border: solid 2px #5d0ca3;
+    border-radius: 10px;
+    box-shadow: #5d0ca3 0px 7px 2px, #000 0px 8px 5px;
+
+}
+
+.modal .butons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+.modal input{
+    width: 100%;
+    font-size: large;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.modal button.add{
+    position: relative;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-top: 100px ;
+    --text-color: #fff;
+    border: none;
+    background: #5d0ca3;
+    color: var(--text-color);
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: #34055d 0px 7px 2px, #000 0px 8px 5px;
+}
+
+
+.modal button.cancel{
+    position: relative;
+    background-color: white;
+    color: #5d0ca3;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin: 20px 20px;
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: #a8a1a1 0px 7px 2px, #000 0px 8px 5px;
+}
+
+.modal  button.add:active {
+    top: 4px;
+    box-shadow: #34055d 0px 3px 2px,#000 0px 3px 5px;
+  }
+
+  .modal  button.cancel:active {
+    top: 4px;
+    box-shadow: white 0px 3px 2px,#000 0px 3px 5px;
+  }
+
+.modal button:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
